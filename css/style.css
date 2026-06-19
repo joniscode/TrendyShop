@@ -874,6 +874,15 @@ ol {
             }
         }
         
+        main.contactenos{
+
+          padding-top: 100px;
+          padding-bottom: 50px;
+          min-height: 70vh;
+          flex: 1;
+          background-color: #f0f2f5;
+
+        }
         .animate-on-load {
             animation: fadeInUp 0.5s ease forwards;
         }
