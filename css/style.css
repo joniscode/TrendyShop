@@ -127,20 +127,27 @@ ol {
   background-color: var(--color-secondary);
 }
 
+.third-sec h2 {
+ color: var(--color-light);
+}
+
 .first-sec img {
-  max-width: 250px;
-  width: 100%;
+  width: auto;
   height: auto;
   border-radius: 10%;
 }
 
 .second-sec img {
-  height: 200px;
-  width: 300px;
+  height: auto;
+  width: auto;
   border-radius: 10%;
 }
 
-.first-sec,
+.third-sec .img-icons {
+  height: 50px;
+  width: 50px;
+}
+
 .second-sec,
 .third-sec {
   padding-top: 100px;
