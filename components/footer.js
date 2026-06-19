@@ -11,7 +11,7 @@ export const renderFooter = (basePath = ".") => {
         <a class="site-logo site-logo--footer" href="${base}/index.html">
           <img
             class="site-logo__image"
-            src="${base}/assets/images/trendyshop_favicon_512.png"
+            src="${base}/assets/images/logo-blanco.svg"
             alt=""
             aria-hidden="true"
           />
