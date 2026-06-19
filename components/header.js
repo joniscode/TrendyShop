@@ -8,7 +8,7 @@ export const renderHeader = (basePath = ".") => {
       <a class="site-logo" href="${base}/index.html" aria-label="Ir al inicio">
         <img
           class="site-logo__image"
-          src="${base}/assets/images/logo.png"
+          src="${base}/assets/images/logo.svg"
           alt="TrendyShop"
         />
       </a>
