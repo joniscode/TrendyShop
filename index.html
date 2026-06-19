@@ -8,17 +8,63 @@
       content="Tienda online con catalogo, carrito y contacto."
     />
     <title>TrendyShop | Inicio</title>
-    <link rel="icon" href="./assets/images/favicon.ico" />
+    <link rel="icon" href="./assets/images/trendyshop_favicon.ico" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div data-header></div>
 
     <main class="site-main">
-      <div class="container">
-        <!-- Pega aqui los componentes de la pagina de inicio -->
+  <section class="home-hero">
+    <div class="container home-hero__content">
+      <div class="home-hero__text">
+        <span class="home-hero__label">Nueva temporada</span>
+        <h1>Encuentra tu estilo en TrendyShop</h1>
+        <p>
+          Descubre prendas modernas, comodas y versatiles para crear looks que
+          se adapten a tu dia a dia.
+        </p>
+        <div class="home-hero__actions">
+          <a class="button button--primary" href="./catalogo/index.html">
+            Ver catalogo
+          </a>
+          <a class="button button--secondary" href="./quienes-somos/index.html">
+            Conocenos
+          </a>
+        </div>
       </div>
-    </main>
+
+      <div class="home-hero__card">
+        <h2>TrendyShop</h2>
+        <p>Moda actual, compras faciles y productos seleccionados para ti.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-categories">
+    <div class="container">
+      <h2>Categorias destacadas</h2>
+
+      <div class="home-categories__grid">
+        <article class="category-card">
+          <h3>Ropa casual</h3>
+          <p>Prendas comodas para todos los dias.</p>
+        </article>
+        
+
+        <article class="category-card">
+          <h3>Accesorios</h3>
+          <p>Detalles que completan tu estilo.</p>
+        </article>
+
+        <article class="category-card">
+          <h3>Nuevos productos</h3>
+          <p>Explora las ultimas novedades de la tienda.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
 
     <div data-footer></div>
 
