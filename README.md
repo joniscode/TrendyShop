@@ -7,8 +7,10 @@ Proyecto de tienda online creado con Vite, JavaScript vanilla, HTML y CSS.
 - Vite: servidor de desarrollo y empaquetador del proyecto.
 - JavaScript vanilla: componentes, eventos e interacciones del checkout.
 - HTML y CSS: estructura, estilos globales y responsive.
+- Bootstrap 5.3.8: estilos de apoyo usados en la pagina de catalogo mediante CDN.
+- SweetAlert2: alertas visuales usadas al agregar productos al carrito desde catalogo mediante CDN.
 
-Por ahora no se usan librerias externas de UI. Si mas adelante se agrega alguna, debe documentarse en esta seccion.
+Si mas adelante se agrega otra libreria, debe documentarse en esta seccion.
 
 ## Instalacion
 
