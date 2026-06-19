@@ -1,6 +1,4 @@
 
-        
-
 // IMPORTAR COMPONENTES
 
 import { renderHeader } from '../components/header.js';
@@ -290,7 +288,6 @@ form.addEventListener('submit', function(e) {
         showToast('¡Mensaje enviado con éxito! Te responderemos pronto.', 'success');
     }, 2000);
 });
-
 
 // CARGAR DATOS GUARDADOS
 
