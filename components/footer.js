@@ -51,6 +51,14 @@ export const renderFooter = (basePath = ".") => {
             GOV.CO
           </a>
         </section>
+        <section class="site-footer__links" aria-label="Integrantes del grupo">
+          <h2>Grupo 7</h2>
+          <span>Laura Romero</span>
+          <span>Oscar Yustres</span>
+          <span>Sebastian Ruiz</span>
+          <span>Rigoberto Miranda</span>
+          <span>Jonathan Arevalo</span>
+        </section>
       </div>
     </div>
 

@@ -27,7 +27,14 @@ export const renderHeader = (basePath = ".") => {
         <a href="${base}/catalogo/">Catalogo</a>
         <a href="${base}/quienes-somos/">Quienes somos</a>
         <a href="${base}/contactanos/">Contactanos</a>
-        <a href="${base}/carrito/">Carrito</a>
+        <a class="site-nav__icon-link" href="${base}/carrito/">
+          <span>Carrito</span>
+          <span class="site-nav__badge" data-cart-count>0</span>
+        </a>
+        <a class="site-nav__icon-link" href="${base}/catalogo/#favoritos">
+          <span>Me gustan</span>
+          <span class="site-nav__badge" data-favorites-count>0</span>
+        </a>
       </nav>
     </div>
   </header>

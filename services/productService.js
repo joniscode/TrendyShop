@@ -1,4 +1,4 @@
-import { ENV } from "../env/config";
+import { ENV } from "../env/config.js";
 const menCategory = encodeURIComponent("men's clothing");
 const womenCategory = encodeURIComponent("women's clothing");
 

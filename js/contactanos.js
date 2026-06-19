@@ -1,16 +1,4 @@
 
-// IMPORTAR COMPONENTES
-
-import { renderHeader } from '../components/header.js';
-import { renderFooter } from '../components/footer.js';
-
-
-// RENDERIZAR HEADER Y FOOTER
-
-document.getElementById('header-container').innerHTML = renderHeader('..');
-document.getElementById('footer-container').innerHTML = renderFooter();
-
-
 //  AUTO-SAVE FORM DATA
 
 const form = document.getElementById('contact-form');
