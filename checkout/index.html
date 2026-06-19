@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Checkout de TrendyShop para revisar datos de envio y resumen del pedido."
+    />
+    <title>TrendyShop | Checkout</title>
+    <link rel="icon" href="../assets/images/trendyshop_favicon.ico" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div data-header data-base=".."></div>
+
+    <main class="site-main">
+      <section class="checkout-page">
+        <div class="container">
+          <div class="page-heading">
+            <span>Checkout</span>
+            <h1>Finaliza tu compra</h1>
+            <p>
+              Este formulario es una vista preparada para conectar luego con el
+              carrito, pagos y servicios de envio.
+            </p>
+          </div>
+
+          <ol class="checkout-steps" aria-label="Progreso de compra">
+            <li class="is-complete">Carrito</li>
+            <li class="is-active">Datos</li>
+            <li>Confirmacion</li>
+          </ol>
+
+          <div class="checkout-layout">
+            <form class="checkout-form">
+              <section class="panel">
+                <h2>Datos de contacto</h2>
+                <div class="form-grid">
+                  <label>
+                    Nombre completo
+                    <input type="text" placeholder="Farilejon Hernesto Perez" />
+                  </label>
+                  <label>
+                    Correo electronico
+                    <input type="email" placeholder="correo@ejemplo.com" />
+                  </label>
+                  <label>
+                    Telefono
+                    <input type="tel" placeholder="+57 300 000 0000" />
+                  </label>
+                  <label>
+                    Ciudad
+                    <input type="text" placeholder="Bogota" />
+                  </label>
+                </div>
+              </section>
+
+              <section class="panel">
+                <h2>Direccion de envio</h2>
+                <div class="form-grid">
+                  <label class="form-grid__full">
+                    Direccion
+                    <input type="text" placeholder="Calle 00 # 00 - 00" />
+                  </label>
+                  <label>
+                    Barrio
+                    <input type="text" placeholder="Chapinero" />
+                  </label>
+                  <label>
+                    Codigo postal
+                    <input type="text" placeholder="110111" />
+                  </label>
+                </div>
+              </section>
+
+              <section class="panel">
+                <h2>Metodo de pago</h2>
+                <div class="payment-methods" role="radiogroup" aria-label="Metodo de pago">
+                  <label class="payment-method is-active">
+                    <input type="radio" name="payment" value="card" checked />
+                    <span>
+                      <img src="../assets/images/tarjeta.webp" alt="" aria-hidden="true" />
+                      Tarjeta
+                    </span>
+                  </label>
+                  <label class="payment-method">
+                    <input type="radio" name="payment" value="nequi" />
+                    <span>
+                      <img src="../assets/images/nequi.png" alt="" aria-hidden="true" />
+                      Nequi
+                    </span>
+                  </label>
+                  <label class="payment-method">
+                    <input type="radio" name="payment" value="pse" />
+                    <span>
+                      <img src="../assets/images/PSE.png" alt="" aria-hidden="true" />
+                      PSE
+                    </span>
+                  </label>
+                  <label class="payment-method">
+                    <input type="radio" name="payment" value="cash" />
+                    <span>
+                      <img src="../assets/images/domicilio.png" alt="" aria-hidden="true" />
+                      Contra entrega
+                    </span>
+                  </label>
+                </div>
+
+                <div class="payment-panel is-active" data-payment-panel="card">
+                  <div class="wallet-box">
+                    <strong>Pago con tarjeta</strong>
+                    <p>Completa los datos de tu tarjeta en una vista segura antes de pagar.</p>
+                    <button class="button-primary" data-open-card-modal type="button">
+                      Completar datos de tarjeta
+                    </button>
+                  </div>
+                </div>
+
+                <div class="payment-card-modal" data-card-modal aria-hidden="true">
+                  <div class="payment-card-modal__content" role="dialog" aria-modal="true" aria-labelledby="card-modal-title">
+                    <div class="payment-card-modal__header">
+                      <div>
+                        <span>Pago seguro</span>
+                        <h2 id="card-modal-title">Datos de la tarjeta</h2>
+                      </div>
+                      <button class="payment-card-modal__close" data-close-card-modal type="button" aria-label="Cerrar formulario de tarjeta">
+                        X
+                      </button>
+                    </div>
+
+                    <div class="credit-card" data-credit-card data-brand="visa">
+                    <div class="credit-card__inner">
+                      <div class="credit-card__face credit-card__front">
+                        <div class="credit-card__top">
+                          <span class="credit-card__chip"></span>
+                          <img
+                            data-card-logo
+                            src="../assets/images/visa.png"
+                            alt="Visa"
+                          />
+                        </div>
+                        <p data-card-preview>0000 0000 0000 0000</p>
+                        <div class="credit-card__bottom">
+                          <span data-card-name>Nombre Apellido</span>
+                          <span data-card-expiry>MM/AA</span>
+                        </div>
+                      </div>
+                      <div class="credit-card__face credit-card__back">
+                        <span class="credit-card__stripe"></span>
+                        <div class="credit-card__cvv">
+                          <span>CVV</span>
+                          <strong data-card-cvv>000</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-grid">
+                    <label class="form-grid__full">
+                      Numero de tarjeta
+                      <input
+                        data-card-number
+                        inputmode="numeric"
+                        maxlength="19"
+                        placeholder="4242 4242 4242 4242"
+                        type="text"
+                      />
+                    </label>
+                    <label class="form-grid__full">
+                      Nombre en la tarjeta
+                      <input
+                        data-card-holder
+                        placeholder="Farilejon Hernesto Perez"
+                        type="text"
+                      />
+                    </label>
+                    <label>
+                      Vencimiento
+                      <input
+                        data-card-expiration
+                        inputmode="numeric"
+                        maxlength="5"
+                        placeholder="MM/AA"
+                        type="text"
+                      />
+                    </label>
+                    <label>
+                      CVV
+                      <input
+                        data-card-cvc
+                        inputmode="numeric"
+                        maxlength="4"
+                        placeholder="123"
+                        type="text"
+                      />
+                    </label>
+                  </div>
+                </div>
+                </div>
+
+                <div class="payment-panel" data-payment-panel="nequi">
+                  <div class="wallet-box">
+                    <strong>Pago con Nequi</strong>
+                    <p>Ingresa el numero asociado a tu cuenta para simular la solicitud de pago.</p>
+                    <label>
+                      Numero Nequi
+                      <input inputmode="numeric" placeholder="300 000 0000" type="tel" />
+                    </label>
+                  </div>
+                </div>
+
+                <div class="payment-panel" data-payment-panel="pse">
+                  <div class="wallet-box">
+                    <strong>Pago por PSE</strong>
+                    <p>Selecciona tu banco para continuar con la vista de pago seguro.</p>
+                    <label>
+                      Banco
+                      <select>
+                        <option>Bancolombia</option>
+                        <option>Davivienda</option>
+                        <option>Banco de Bogota</option>
+                        <option>BBVA</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="payment-panel" data-payment-panel="cash">
+                  <div class="wallet-box">
+                    <strong>Pago contra entrega</strong>
+                    <p>El pedido queda preparado y el pago se realiza al recibirlo.</p>
+                  </div>
+                </div>
+              </section>
+            </form>
+
+            <aside class="order-summary" aria-label="Resumen del pedido">
+              <h2>Resumen</h2>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <strong>$299.700</strong>
+              </div>
+              <div class="summary-row">
+                <span>Envio</span>
+                <strong>$12.000</strong>
+              </div>
+              <div class="summary-row">
+                <span>Descuento</span>
+                <strong>-$20.000</strong>
+              </div>
+              <div class="summary-row summary-row--total">
+                <span>Total</span>
+                <strong>$291.700</strong>
+              </div>
+              <button class="button-primary" data-pay-button type="button">Pagar ahora</button>
+              <a class="button-secondary" href="../carrito/">Volver al carrito</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="payment-loader" data-payment-loader aria-live="polite" aria-hidden="true">
+      <div class="payment-loader__content">
+        <span class="payment-loader__spinner"></span>
+        <strong>Procesando pago</strong>
+        <p>Estamos validando la informacion de forma segura.</p>
+      </div>
+    </div>
+
+    <div class="payment-success" data-payment-success aria-hidden="true">
+      <div class="payment-success__content" role="dialog" aria-modal="true" aria-labelledby="payment-success-title">
+        <span class="payment-success__icon" aria-hidden="true">OK</span>
+        <h2 id="payment-success-title">Pago recibido</h2>
+        <p>Gracias por tu compra. Disfrutala y hasta la proxima.</p>
+        <div class="payment-success__actions">
+          <a class="button-primary" href="../index.html">Volver al inicio</a>
+          <button class="button-secondary" data-close-success type="button">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div data-footer data-base=".."></div>
+
+    <script type="module" src="../js/app.js"></script>
+  </body>
+</html>

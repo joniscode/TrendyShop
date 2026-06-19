@@ -1,13 +1,18 @@
-import { renderFooter } from "../components/footer.js";
-import { renderHeader } from "../components/header.js";
+import { initHeaderMenu } from "./layout/menuHeader.js";
+import { initLayout } from "./layout/renderLayout.js";
+import { closePaymentSuccess, initPaymentConfirmation } from "./pagos/confirmacionPago.js";
+import { initPaymentMethods } from "./pagos/metodosPago.js";
+import { closeCardModal, initCreditCard } from "./tarjetas/tarjetaCredito.js";
 
-const headerRoot = document.querySelector("[data-header]");
-const footerRoot = document.querySelector("[data-footer]");
+initLayout();
+initHeaderMenu();
+initCreditCard();
+initPaymentMethods();
+initPaymentConfirmation();
 
-if (headerRoot) {
-  headerRoot.innerHTML = renderHeader(headerRoot.dataset.base);
-}
-
-if (footerRoot) {
-  footerRoot.innerHTML = renderFooter();
-}
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeCardModal();
+    closePaymentSuccess();
+  }
+});
