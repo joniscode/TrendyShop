@@ -1,0 +1,125 @@
+:root {
+  --font-primary: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+
+  --color-primary: #2563eb;
+  --color-primary-rgb: 37, 99, 235;
+  --color-secondary: #14b8a6;
+  --color-secondary-rgb: 20, 184, 166;
+  --color-accent: #f59e0b;
+  --color-accent-rgb: 245, 158, 11;
+  --color-danger: #ef4444;
+  --color-danger-rgb: 239, 68, 68;
+  --color-dark: #111827;
+  --color-dark-rgb: 17, 24, 39;
+  --color-light: #f8fafc;
+  --color-light-rgb: 248, 250, 252;
+
+  --primary-10: rgba(var(--color-primary-rgb), 0.1);
+  --secondary-10: rgba(var(--color-secondary-rgb), 0.1);
+  --accent-10: rgba(var(--color-accent-rgb), 0.1);
+  --danger-10: rgba(var(--color-danger-rgb), 0.1);
+  --dark-10: rgba(var(--color-dark-rgb), 0.1);
+  --dark-70: rgba(var(--color-dark-rgb), 0.7);
+
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.container {
+  width: min(100% - (var(--container-padding) * 2), var(--container-max-width));
+  margin-inline: auto;
+}
+
+.site-header {
+  background-color: var(--color-light);
+  border-bottom: 1px solid var(--dark-10);
+}
+
+.site-header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 1rem;
+}
+
+.site-logo {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--dark-70);
+  font-weight: 600;
+}
+
+.site-main {
+  min-height: 70vh;
+  padding-block: 2rem;
+}
+
+.site-footer {
+  padding-block: 1.5rem;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .site-header__content,
+  .site-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-block: 1rem;
+  }
+}
