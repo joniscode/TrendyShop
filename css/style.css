@@ -123,3 +123,127 @@ ol {
     padding-block: 1rem;
   }
 }
+.home-hero {
+  padding-block: 4rem;
+  background-color: var(--primary-10);
+
+}
+.home-hero__content{
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-hero__text{
+  max-width: 640px;
+
+}
+
+.home-hero__label{
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.home-hero h1 {
+  color: var(--color-dark);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.home-hero p {
+  margin-top: 1rem;
+  color: var(--dark-70);
+  font-size: 1.125rem;
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 800;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: white;
+
+}
+
+.button--secondary {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.homer-hero__card {
+  padding: 2rem;
+  border: 1px solid var(--dark-10);
+  border-radius: 1rem;
+  background-color:white;
+  box-shadow: 0 24px 60px rgba(var(--color-dark-rgb),0.12);
+
+}
+.home-hero__card h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+.home-categories {
+  padding-block: 4rem;
+}
+
+.home-categories h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.home-categories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.category-card {
+  min-height: 180px;
+  padding: 1.5rem;
+  border: 1px solid var(--dark-10);
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.category-card h3 {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.category-card p {
+  margin-top: 0.75rem;
+  color: var(--dark-70);
+}
+
+@media (max-width: 768px) {
+  .home-hero__content,
+  .home-categories__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero {
+    padding-block: 3rem;
+  }
+}
+
+
