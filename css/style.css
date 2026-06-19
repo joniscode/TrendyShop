@@ -817,10 +817,16 @@ ol {
   .payment-methods {
     grid-template-columns: 1fr;
   }
+
+/* inicio estilos*/
+
+
 }
 .home-hero {
   padding-block: 4rem;
+  background: linear-gradient(135deg, var(--primary-10), var(--secondary-10));
   background-color: var(--primary-10);
+  
 
 }
 .home-hero__content{
@@ -855,20 +861,91 @@ ol {
   color: var(--dark-70);
   font-size: 1.125rem;
 }
-
-/*Estilos contactos*/
-
-/* ====== ANIMACIONES ====== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 800;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.button--secondary {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.home-hero__card {
+  padding: 2rem;
+  border: 1px solid var(--dark-10);
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 24px 60px rgba(var(--color-dark-rgb), 0.12);
+}
+
+.home-hero__card h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+.home-categories {
+  padding-block: 4rem;
+}
+
+.home-categories h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.home-categories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.category-card {
+  min-height: 180px;
+  padding: 1.5rem;
+  border: 1px solid var(--dark-10);
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.category-card h3 {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.category-card p {
+  margin-top: 0.75rem;
+  color: var(--dark-70);
+}
+
+@media (max-width: 768px) {
+  .home-hero__content,
+  .home-categories__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero {
+    padding-block: 3rem;
+  }
+}
+
+/*fin inicio estilos*/
 
 main.contactenos{
 
